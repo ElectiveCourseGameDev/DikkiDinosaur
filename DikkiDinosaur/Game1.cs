@@ -7,6 +7,8 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.GamerServices;
+using OpenTK.Graphics.OpenGL;
+
 #endregion
 
 namespace DikkiDinosaur
@@ -19,8 +21,10 @@ namespace DikkiDinosaur
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        private Texture2D dikkiDinosaurTexture2D;
-        private Vector2 dikkiDinosaurPosition = new Vector2(200,80);
+        private Sprite DikkiDinosaur;
+        private Cloud cloud1;
+        private Cloud cloud2;
+        private Cloud cloud3;
         public Game1()
             : base()
         {
@@ -52,9 +56,14 @@ namespace DikkiDinosaur
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            dikkiDinosaurTexture2D = Content.Load<Texture2D>("dikkiDinosaur.png");
+            var dikkiTexture2D = Content.Load<Texture2D>("dikkiDinosaur.png");
+            DikkiDinosaur = new Sprite(dikkiTexture2D, new Vector2(200, 80));
 
-
+            var cloudTexture = Content.Load<Texture2D>("cloud.png");
+            cloud1 = new Cloud(cloudTexture, new Vector2(20,20), 1f);
+            cloud1.Scale = 0.1f;
+            cloud2 = new Cloud(cloudTexture, new Vector2(900,20), 0.8f );
+            cloud2.Scale = 0.13f;
             // TODO: use this.Content to load your game content here
         }
 
@@ -77,12 +86,13 @@ namespace DikkiDinosaur
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Left)) dikkiDinosaurPosition.X--;
-            if (Keyboard.GetState().IsKeyDown(Keys.Right)) dikkiDinosaurPosition.X++;
+            if (Keyboard.GetState().IsKeyDown(Keys.Left)) DikkiDinosaur.PositionX--;
+            if (Keyboard.GetState().IsKeyDown(Keys.Right)) DikkiDinosaur.PositionX++;
             
 
             // TODO: Add your update logic here
-
+            cloud1.Update(gameTime);
+            cloud2.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -96,7 +106,9 @@ namespace DikkiDinosaur
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(dikkiDinosaurTexture2D, dikkiDinosaurPosition, Color.White);
+            cloud2.Draw(gameTime, spriteBatch);
+            cloud1.Draw(gameTime, spriteBatch);
+            DikkiDinosaur.Draw(gameTime, spriteBatch);
             spriteBatch.End();
             base.Draw(gameTime);
         }
