@@ -9,3 +9,5 @@ C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDino
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\Tao.Sdl.dll
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.exe
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.pdb
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.exe
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.pdb

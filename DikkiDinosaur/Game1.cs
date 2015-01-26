@@ -16,6 +16,7 @@ namespace DikkiDinosaur
     /// </summary>
     public class Game1 : Game
     {
+        Sprite
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
