@@ -160,16 +160,16 @@ namespace DikkiDinosaur
         // implemented by Iupdateable
         public void Update(GameTime gameTime)
         {
-            //if (InputGamePadDigitalDpadListeners.Count < 0)
-            //{
-            //    for (PlayerIndex i = 0; i < (PlayerIndex) 4; i++)
-            //    {
-                  //  if (GamePad.GetState((PlayerIndex.One)).IsConnected)
+            if (InputGamePadDigitalDpadListeners.Count < 0)
+            {
+                for (PlayerIndex i = 0; i < (PlayerIndex) 4; i++)
+                {
+                    if (GamePad.GetState((PlayerIndex.One)).IsConnected)
                     {
-                        CheckDpad(GamePad.GetState(PlayerIndex.One), PlayerIndex.One);
+                        CheckDpad(GamePad.GetState(i), i);
                     }
-            //    }
-            //}
+                }
+            }
         }
 
         public bool Enabled { get; private set; }

@@ -80,17 +80,14 @@ namespace DikkiDinosaur
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
-            inputController.Update(gameTime);
+           inputController.Update(gameTime);
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left)) dikkiDinosaurPosition.X--;
             if (Keyboard.GetState().IsKeyDown(Keys.Right)) dikkiDinosaurPosition.X++;
 
-            if (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed) dikkiDinosaurPosition.X--;
+            //if (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed) dikkiDinosaurPosition.X--;
 
             // TODO: Add your update logic here
 
