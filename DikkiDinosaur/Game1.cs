@@ -22,9 +22,9 @@ namespace DikkiDinosaur
         SpriteBatch spriteBatch;
 
         private Sprite DikkiDinosaur;
-        private Cloud cloud1;
+        private Sprite cloud1;
         private Cloud cloud2;
-        private Cloud cloud3;
+        
         public Game1()
             : base()
         {
@@ -60,8 +60,9 @@ namespace DikkiDinosaur
             DikkiDinosaur = new Sprite(dikkiTexture2D, new Vector2(200, 80));
 
             var cloudTexture = Content.Load<Texture2D>("cloud.png");
-            cloud1 = new Cloud(cloudTexture, new Vector2(20,20), 1f);
+            cloud1 = new Sprite(cloudTexture, new Vector2(20,20));
             cloud1.Scale = 0.1f;
+            
             cloud2 = new Cloud(cloudTexture, new Vector2(900,20), 0.8f );
             cloud2.Scale = 0.13f;
             // TODO: use this.Content to load your game content here
