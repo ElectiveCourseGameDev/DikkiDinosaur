@@ -36,7 +36,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
-    <Compile Include="IInput.cs" />
+    <Compile Include="IInputGamePadButtons.cs" />
+    <Compile Include="IInputGamePadDigitalDpad.cs" />
+    <Compile Include="IInputGamePadDigitalTriggers.cs" />
+    <Compile Include="IInputGamePadLeftStick.cs" />
+    <Compile Include="IInputGamePadRightStick.cs" />
     <Compile Include="InputController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -14,11 +14,13 @@ namespace DikkiDinosaur
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Game
+    public class Game1 : Game, IInputGamePadDigitalDpad
     {
         
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+
+        InputController inputController;
 
         private Texture2D dikkiDinosaurTexture2D;
         private Vector2 dikkiDinosaurPosition = new Vector2(200,80);
@@ -41,6 +43,10 @@ namespace DikkiDinosaur
             graphics.PreferredBackBufferWidth = 800 ; 
             graphics.PreferredBackBufferHeight = 450;
             graphics.ApplyChanges();
+            
+            inputController = new InputController();
+            inputController.InputGamePadDigitalDpadListeners.Add(this);
+
             base.Initialize();
         }
 
@@ -74,12 +80,17 @@ namespace DikkiDinosaur
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                this.Exit();
+
+            inputController.Update(gameTime);
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
             if (Keyboard.GetState().IsKeyDown(Keys.Left)) dikkiDinosaurPosition.X--;
             if (Keyboard.GetState().IsKeyDown(Keys.Right)) dikkiDinosaurPosition.X++;
-            
+
+            if (GamePad.GetState(PlayerIndex.One).Buttons.A == ButtonState.Pressed) dikkiDinosaurPosition.X--;
 
             // TODO: Add your update logic here
 
@@ -99,6 +110,26 @@ namespace DikkiDinosaur
             spriteBatch.Draw(dikkiDinosaurTexture2D, dikkiDinosaurPosition, Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
+        }
+
+        public void ButtonDpadDownPressed(PlayerIndex playerIndex, InputController.ButtonStates buttonStates)
+        {
+            dikkiDinosaurPosition.Y++;
+        }
+
+        public void ButtonDpadUpPressed(PlayerIndex playerIndex, InputController.ButtonStates buttonStates)
+        {
+            dikkiDinosaurPosition.Y--;
+        }
+
+        public void ButtonDpadLeftPressed(PlayerIndex playerIndex, InputController.ButtonStates buttonStates)
+        {
+            dikkiDinosaurPosition.X--;
+        }
+
+        public void ButtonDpadRightPressed(PlayerIndex playerIndex, InputController.ButtonStates buttonStates)
+        {
+            dikkiDinosaurPosition.X++;
         }
     }
 }

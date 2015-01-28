@@ -1,6 +1,5 @@
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.csprojResolveAssemblyReference.cache
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\Content\dikkiDinosaur.png
-C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\SDL.dll
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\DikkiDinosaur.exe
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\DikkiDinosaur.pdb
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\Lidgren.Network.dll
