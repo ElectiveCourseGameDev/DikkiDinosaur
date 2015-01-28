@@ -11,3 +11,11 @@ C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDino
 C:\Users\Ebbe Vang\Documents\Visual Studio 2013\Projects\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.pdb
 D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.exe
 D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.pdb
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\obj\x86\Debug\DikkiDinosaur.csprojResolveAssemblyReference.cache
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\Content\dikkiDinosaur.png
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\Lidgren.Network.dll
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\MonoGame.Framework.dll
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\OpenTK.dll
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\Tao.Sdl.dll
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\DikkiDinosaur.exe
+D:\projects\visualStudio2013\DikkiDinosaur\DikkiDinosaur\bin\WindowsGL\Debug\DikkiDinosaur.pdb

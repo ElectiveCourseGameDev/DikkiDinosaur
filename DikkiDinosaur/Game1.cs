@@ -16,7 +16,7 @@ namespace DikkiDinosaur
     /// </summary>
     public class Game1 : Game
     {
-        Sprite
+        
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -54,8 +54,7 @@ namespace DikkiDinosaur
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             dikkiDinosaurTexture2D = Content.Load<Texture2D>("dikkiDinosaur.png");
-
-
+            
             // TODO: use this.Content to load your game content here
         }
 
